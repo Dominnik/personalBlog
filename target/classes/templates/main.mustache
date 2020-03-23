@@ -5,6 +5,22 @@
 </head>
 
 <body>
-<div>{{main}}</div>
+
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Ввведите сообщение" />
+        <input type="text" name="tag" placeholder="Тэг" />
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>Список сообщений</div>
+
+    {{#messages}}
+        <div>
+        <b>{{id}}</b>
+        <p>{{text}}</p>
+        <i>{{tag}}</i>
+        </div>
+    {{/messages}}
 </body>
 </html>
